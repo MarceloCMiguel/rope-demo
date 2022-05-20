@@ -15,19 +15,18 @@ public class CheckDistance : MonoBehaviour
     {
         listPositionRope1 = new List<Vector3>();
         listPositionRope2 = new List<Vector3>();
-        
+        InvokeRepeating(nameOf(checkDistance(2.0f,listPositionRope1,listPositionRope2)), 0,2);
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(checkDistance(2.0f,listPositionRope1,listPositionRope2));
+        
         
     }
     // every 2 seconds perform the print()
     private IEnumerator checkDistance(float waitTime, List<Vector3>listPositionRope1,List<Vector3>listPositionRope2 )
     {
-        yield return new WaitForSeconds(waitTime);
         foreach (Transform child in rope1.transform){
             listPositionRope1.Add(child.position);
         }
@@ -37,6 +36,7 @@ public class CheckDistance : MonoBehaviour
         for(int i = 0; i < listPositionRope1.Count; i++){
             print(Vector3.Distance(listPositionRope1[i],listPositionRope2[i]));
         }
+        yield return checkDistance(2.0f,listPositionRope1,listPositionRope2);
     
     }
 
