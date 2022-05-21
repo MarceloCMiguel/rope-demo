@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class Player2Controller : MonoBehaviour
 {
     Rigidbody2D m_Rigidbody;
     private float m_Speed = 5f;
@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 startPosition;
 
     private bool hit = false;
+    private float flashSpeed = 0.12f;
     CircleCollider2D playerCollider;
 
 
@@ -29,20 +30,26 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate(){
         float horizontal = 0.0f;
         float vertical = 0.0f;
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow)){
+            //  m_Rigidbody.AddForce(Vector3.left*m_Speed);
             horizontal += -1 ;
-
-         if (Input.GetKey(KeyCode.D))
+        }
+         if (Input.GetKey(KeyCode.RightArrow))
             horizontal += 1 ;
-         if (Input.GetKey(KeyCode.W))
+            //  m_Rigidbody.AddForce(Vector3.right*m_Speed);
+         if (Input.GetKey(KeyCode.UpArrow))
             vertical += 1;
-         if (Input.GetKey(KeyCode.S))
+            //  m_Rigidbody.AddForce(Vector3.up*m_Speed);
+         if (Input.GetKey(KeyCode.DownArrow))
             vertical += -1;
-
+            //  m_Rigidbody.AddForce(Vector3.down*m_Speed);
+        // Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"),0);
+        // newPosition = transform.position + m_Input * Time.deltaTime * m_Speed;
+        // Vector2 posicaoViewport = Camera.main.WorldToViewportPoint(newPosition);
+        // if (posicaoViewport.x>=0 && posicaoViewport.x<=1 && posicaoViewport.y<=1 && posicaoViewport.y>=0){
         Vector3 m_Input = new Vector3(horizontal,vertical,1);
         newPosition = transform.position + m_Input * Time.deltaTime * m_Speed;
         m_Rigidbody.MovePosition(newPosition);
-
-
+        // }  
     }
 }
