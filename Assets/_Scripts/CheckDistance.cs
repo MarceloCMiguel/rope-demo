@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class CheckDistance : MonoBehaviour
 {
 
@@ -12,6 +14,8 @@ public class CheckDistance : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Level1"){
         listPositionRope2 = new List<Vector3>{new Vector3(6.7f, 0.7f, 0.0f),
 new Vector3(6.4f, 0.6f, 0.0f),
 new Vector3(6.0f, 0.7f, 0.0f),
@@ -37,6 +41,10 @@ new Vector3(1.8f, -1.6f, 0.0f),
 new Vector3(1.5f, -1.7f, 0.0f),
 new Vector3(1.3f, -1.7f, 0.0f),
         };
+        }
+        else if (scene.name == "Level2"){
+            
+        }
         
         InvokeRepeating(nameof(checkDistance), 0,1);
     }
@@ -50,6 +58,7 @@ new Vector3(1.3f, -1.7f, 0.0f),
     // every 2 seconds perform the print()
     private void checkDistance()
     {
+        
         listPositionRope1 = new List<Vector3>();
         
         foreach (Transform child in rope1.transform){
