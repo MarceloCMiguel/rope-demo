@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player2Controller : MonoBehaviour
-{
+public class Player2Controller : MonoBehaviour {
     Rigidbody2D m_Rigidbody;
     private float m_Speed = 5f;
     public Vector3 newPosition;
@@ -15,19 +14,17 @@ public class Player2Controller : MonoBehaviour
     CircleCollider2D playerCollider;
 
 
-    void Start()
-    {
+    void Start() {
         //Fetch the Rigidbody from the GameObject with this script attached
         m_Rigidbody = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
         playerCollider = GetComponent<CircleCollider2D>();
     }
 
-    void Update()
-    {
+    void Update() {
     }
 
-    void FixedUpdate(){
+    void FixedUpdate() {
         float horizontal = 0.0f;
         float vertical = 0.0f;
         if (Input.GetKey(KeyCode.LeftArrow)){

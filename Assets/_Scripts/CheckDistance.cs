@@ -4,19 +4,17 @@ using UnityEngine;
 
 using UnityEngine.SceneManagement;
 
-public class CheckDistance : MonoBehaviour
-{
+public class CheckDistance : MonoBehaviour {
 
     public GameObject rope1;
 
-    private List<Vector3> listPositionRope1;
-    private List<Vector3> listPositionRope2;
-    // Start is called before the first frame update
-    void Start()
-    {
+    private List<Vector3> listPositionRopePlayer;
+    private List<Vector3> listPositionRopeTemplate;
+
+    void Start() {
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Level1") {
-            listPositionRope2 = new List<Vector3> {
+            listPositionRopeTemplate = new List<Vector3> {
                 new Vector3(6.7f, 0.7f, 0.0f),
                 new Vector3(6.4f, 0.6f, 0.0f),
                 new Vector3(6.0f, 0.7f, 0.0f),
@@ -44,7 +42,7 @@ public class CheckDistance : MonoBehaviour
             };
         }
         else if (scene.name == "Level2") {
-            listPositionRope2 = new List<Vector3> {
+            listPositionRopeTemplate = new List<Vector3> {
                 new Vector3(1.7f, -1.0f, 0.0f),
                 new Vector3(1.6f, -0.7f, 0.0f),
                 new Vector3(1.5f, -0.3f, 0.0f),
@@ -75,35 +73,33 @@ public class CheckDistance : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         
         
     }
     // every 2 seconds perform the print()
-    private void checkDistance()
-    {
+    private void checkDistance() {
         
-        listPositionRope1 = new List<Vector3>();
+        listPositionRopePlayer = new List<Vector3>();
         
-        foreach (Transform child in rope1.transform){
-            listPositionRope1.Add(child.position);
+        foreach (Transform child in rope1.transform) {
+            listPositionRopePlayer.Add(child.position);
         }
         
         double x = 0;
         bool y = true;
-        for(int i = 0; i < listPositionRope1.Count; i++){
-            double distance = Vector3.Distance(listPositionRope1[i],listPositionRope2[i]);
-            x+= distance;
+        for (int i = 0; i < listPositionRopePlayer.Count; i++){
+            double distance = Vector3.Distance(listPositionRopePlayer[i], listPositionRopeTemplate[i]);
+            x += distance;
             print("--");
             if (distance > 0.6f){
                 print(distance);
                 y = false;
             } 
-            // print(Vector3.Distance(listPositionRope1[i],listPositionRope2[i]));
+            // print(Vector3.Distance(listPositionRopePlayer[i],listPositionRopeTemplate[i]));
         }
         print(y);
-        print(x/listPositionRope1.Count);
+        print(x/listPositionRopePlayer.Count);
     }
 
 }
