@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour {
     private float m_Speed = 5f;
     public Vector3 newPosition;
     public Vector3 startPosition;
-
     private bool hit = false;
     CircleCollider2D playerCollider;
 
@@ -18,7 +17,7 @@ public class PlayerController : MonoBehaviour {
         m_Rigidbody = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
         playerCollider = GetComponent<CircleCollider2D>();
-    }
+    }   
 
     void Update() {
     }

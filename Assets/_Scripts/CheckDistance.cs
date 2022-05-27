@@ -10,8 +10,10 @@ public class CheckDistance : MonoBehaviour {
 
     private List<Vector3> listPositionRopePlayer;
     private List<Vector3> listPositionRopeTemplate;
+    GameManager gm;
 
     void Start() {
+        gm = GameManager.GetInstance();
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Level1") {
             listPositionRopeTemplate = new List<Vector3> {
@@ -100,6 +102,11 @@ public class CheckDistance : MonoBehaviour {
         }
         print(y);
         print(x/listPositionRopePlayer.Count);
+        if (y){
+            gm.passou = y;
+            gm.NextScene();
+        }
+        gm.distance = x/listPositionRopePlayer.Count;
     }
 
 }
