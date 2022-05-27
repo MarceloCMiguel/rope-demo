@@ -24,8 +24,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        float horizontal = Input.GetAxis("Controller 1 Horizontal");
-        float vertical = Input.GetAxis("Controller 1 Vertical"); 
+        float horizontalController = Input.GetAxis("Controller 1 Horizontal");
+        float verticalController = Input.GetAxis("Controller 1 Vertical");
+        float horizontalKey = Input.GetAxis("Horizontal 1");
+        float verticalKey = Input.GetAxis("Vertical 1");
+        float horizontal = horizontalController + horizontalKey;
+        float vertical = verticalController + verticalKey;
         // if (Input.GetKey(KeyCode.A))
         //     horizontal += -1 ;
 

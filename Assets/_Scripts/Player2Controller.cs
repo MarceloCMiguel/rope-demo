@@ -25,8 +25,12 @@ public class Player2Controller : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        float horizontal = Input.GetAxis("Controller 2 Horizontal");
-        float vertical = Input.GetAxis("Controller 2 Vertical"); 
+        float horizontalController = Input.GetAxis("Controller 2 Horizontal");
+        float verticalController = Input.GetAxis("Controller 2 Vertical");
+        float horizontalKey = Input.GetAxis("Horizontal 2");
+        float verticalKey = Input.GetAxis("Vertical 2");
+        float horizontal = horizontalController + horizontalKey;
+        float vertical = verticalController + verticalKey;
         // if (Input.GetKey(KeyCode.LeftArrow)){
         //     //  m_Rigidbody.AddForce(Vector3.left*m_Speed);
         //     horizontal += -1 ;
