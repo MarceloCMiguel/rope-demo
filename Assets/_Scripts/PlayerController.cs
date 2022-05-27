@@ -24,17 +24,17 @@ public class PlayerController : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        float horizontal = 0.0f;
-        float vertical = 0.0f;
-        if (Input.GetKey(KeyCode.A))
-            horizontal += -1 ;
+        float horizontal = Input.GetAxis("Controller 1 Horizontal");
+        float vertical = Input.GetAxis("Controller 1 Vertical"); 
+        // if (Input.GetKey(KeyCode.A))
+        //     horizontal += -1 ;
 
-        if (Input.GetKey(KeyCode.D))
-            horizontal += 1 ;
-        if (Input.GetKey(KeyCode.W))
-            vertical += 1;
-        if (Input.GetKey(KeyCode.S))
-            vertical += -1;
+        // if (Input.GetKey(KeyCode.D))
+        //     horizontal += 1 ;
+        // if (Input.GetKey(KeyCode.W))
+        //     vertical += 1;
+        // if (Input.GetKey(KeyCode.S))
+        //     vertical += -1;
 
         Vector3 m_Input = new Vector3(horizontal,vertical,1);
         newPosition = transform.position + m_Input * Time.deltaTime * m_Speed;

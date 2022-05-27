@@ -25,20 +25,20 @@ public class Player2Controller : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        float horizontal = 0.0f;
-        float vertical = 0.0f;
-        if (Input.GetKey(KeyCode.LeftArrow)){
-            //  m_Rigidbody.AddForce(Vector3.left*m_Speed);
-            horizontal += -1 ;
-        }
-         if (Input.GetKey(KeyCode.RightArrow))
-            horizontal += 1 ;
-            //  m_Rigidbody.AddForce(Vector3.right*m_Speed);
-         if (Input.GetKey(KeyCode.UpArrow))
-            vertical += 1;
-            //  m_Rigidbody.AddForce(Vector3.up*m_Speed);
-         if (Input.GetKey(KeyCode.DownArrow))
-            vertical += -1;
+        float horizontal = Input.GetAxis("Controller 2 Horizontal");
+        float vertical = Input.GetAxis("Controller 2 Vertical"); 
+        // if (Input.GetKey(KeyCode.LeftArrow)){
+        //     //  m_Rigidbody.AddForce(Vector3.left*m_Speed);
+        //     horizontal += -1 ;
+        // }
+        //  if (Input.GetKey(KeyCode.RightArrow))
+        //     horizontal += 1 ;
+        //     //  m_Rigidbody.AddForce(Vector3.right*m_Speed);
+        //  if (Input.GetKey(KeyCode.UpArrow))
+        //     vertical += 1;
+        //     //  m_Rigidbody.AddForce(Vector3.up*m_Speed);
+        //  if (Input.GetKey(KeyCode.DownArrow))
+        //     vertical += -1;
             //  m_Rigidbody.AddForce(Vector3.down*m_Speed);
         // Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"),0);
         // newPosition = transform.position + m_Input * Time.deltaTime * m_Speed;
