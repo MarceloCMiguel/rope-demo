@@ -10,6 +10,7 @@ public class UI_Start : MonoBehaviour
     {
         
         gm = GameManager.GetInstance();
+        gm.scene_index = 1;
     }
 
     // Update is called once per frame
@@ -19,7 +20,6 @@ public class UI_Start : MonoBehaviour
     }
 
     public void OnClick(){
-        print("a");
         gm.GoToScene("Level1");
     }
 }

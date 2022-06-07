@@ -82,6 +82,8 @@ public class CheckDistance : MonoBehaviour {
     // every 2 seconds perform the print()
     private void checkDistance() {
         
+        if(gm.passou ==false){
+            
         listPositionRopePlayer = new List<Vector3>();
         
         foreach (Transform child in rope1.transform) {
@@ -104,9 +106,11 @@ public class CheckDistance : MonoBehaviour {
         print(x/listPositionRopePlayer.Count);
         if (y){
             gm.passou = y;
-            gm.NextScene();
+            // gm.NextScene();
         }
         gm.distance = x/listPositionRopePlayer.Count;
     }
+    
+        }
 
 }

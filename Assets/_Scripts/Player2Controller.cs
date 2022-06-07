@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player2Controller : MonoBehaviour {
     Rigidbody2D m_Rigidbody;
-    private float m_Speed = 5f;
+    private float m_Speed = 120f;
     public Vector3 newPosition;
     public Vector3 startPosition;
 
@@ -21,10 +21,9 @@ public class Player2Controller : MonoBehaviour {
         playerCollider = GetComponent<CircleCollider2D>();
     }
 
-    void Update() {
-    }
+    
 
-    void FixedUpdate() {
+    void Update() {
         float horizontalController = Input.GetAxis("Controller 2 Horizontal");
         float verticalController = Input.GetAxis("Controller 2 Vertical");
         float horizontalKey = Input.GetAxis("Horizontal 2");
