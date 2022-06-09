@@ -10,7 +10,7 @@ public class UI_Start : MonoBehaviour
     {
         
         gm = GameManager.GetInstance();
-        gm.scene_index = 1;
+        gm.scene_index = 3;
     }
 
     // Update is called once per frame
