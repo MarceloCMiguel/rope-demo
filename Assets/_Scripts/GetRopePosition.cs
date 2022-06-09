@@ -19,7 +19,9 @@ public class GetRopePosition : MonoBehaviour {
     private void getPosition() {
         listPositionRope1 = new List<Vector3>();
         foreach (Transform child in rope.transform){
-            listPositionRope1.Add(child.position);
+            if (child.gameObject.tag == "RopeSeg"){
+                listPositionRope1.Add(child.position);
+            }   
         }
         var result = ListToText(listPositionRope1);
         print(result);

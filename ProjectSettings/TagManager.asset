@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - RopeSeg
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Rope
   - Water
   - UI
   - 
@@ -40,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Pins
+    uniqueID: 2613202713
     locked: 0
