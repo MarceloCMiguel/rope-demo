@@ -32,6 +32,23 @@ public class GameManager
        gameState = GameState.MENU;
    }
 
+   public void setgamestate_pause(){
+       gameState = GameState.PAUSE;
+   }
+   public void setgamestate_game(){
+       gameState = GameState.GAME;
+   }
+   public bool get_gamestatepause(){
+       if(gameState == GameState.PAUSE){
+           return true;
+       }
+       else{
+           return false;
+       }
+   }
+
+
+
    public void NextScene(){
        
        if (scene_index + 1 <SceneManager.sceneCountInBuildSettings){

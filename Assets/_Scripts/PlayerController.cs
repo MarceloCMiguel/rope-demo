@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour {
     public Vector3 startPosition;
     private bool hit = false;
     CircleCollider2D playerCollider;
-
+    GameManager gm;
 
     void Start() {
+        gm = GameManager.GetInstance();
         //Fetch the Rigidbody from the GameObject with this script attached
         m_Rigidbody = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
@@ -22,8 +23,9 @@ public class PlayerController : MonoBehaviour {
     
     void Update() {
         
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !gm.get_gamestatepause())
         {
+            gm.setgamestate_pause();
             Time.timeScale = 0;
             SceneManager.LoadScene("Pause",  LoadSceneMode.Additive);
         }
