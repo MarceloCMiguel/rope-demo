@@ -49,8 +49,10 @@ public class GameManager
    }
 
     public void GoToScene(string scene_name){
+        passou = false;
         SceneManager.LoadScene(scene_name);
     }
+
        
 //        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 //         if (SceneManager.sceneCount > nextSceneIndex)

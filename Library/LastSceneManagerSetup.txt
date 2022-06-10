@@ -19,6 +19,10 @@ sceneSetups:
   isLoaded: 1
   isActive: 1
   isSubScene: 0
+- path: Assets/Scenes/EasterEgg.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
 - path: Assets/Scenes/Pause.unity
   isLoaded: 0
   isActive: 0

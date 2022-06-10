@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class UI_Feedback : MonoBehaviour
 {
     Text textComp;
@@ -34,7 +35,18 @@ public class UI_Feedback : MonoBehaviour
     {
         textComp.enabled = true;
         yield return new WaitForSeconds(waitTime);
-        gm.NextScene();
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Menu") {
+            gm.GoToScene("EasterEgg");
+        }
+        else if (scene.name == "EasterEgg") {
+            gm.GoToScene("Menu");
+        }
+        else {
+            gm.NextScene();
+        }
+        
+        
         
     }
 }

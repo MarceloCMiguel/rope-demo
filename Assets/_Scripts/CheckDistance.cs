@@ -15,18 +15,47 @@ public class CheckDistance : MonoBehaviour {
     void Start() {
         gm = GameManager.GetInstance();
         Scene scene = SceneManager.GetActiveScene();
-        if (scene.name == "Level1") {
+        if (scene.name == "Menu") {
             listPositionRopeTemplate = new List<Vector3> {
-                new Vector3(6.6f,0.7f,0.0f),
-                new Vector3(5.9f,0.6f,0.0f),
-                new Vector3(5.5f,0.1f,0.0f),
-                new Vector3(5.3f,-0.5f,0.0f),
-                new Vector3(4.9f,-1.1f,0.0f),
-                new Vector3(4.5f,-1.6f,0.0f),
-                new Vector3(3.9f,-1.7f,0.0f),
-                new Vector3(3.3f,-1.4f,0.0f),
-                new Vector3(2.7f,-1.3f,0.0f),
-                new Vector3(2.0f,-1.5f,0.0f),
+                new Vector3(-2.7f,-3.5f,0.0f),
+                new Vector3(-2.2f,-3.8f,0.0f),
+                new Vector3(-1.5f,-3.8f,0.0f),
+                new Vector3(-0.9f,-3.8f,0.0f),
+                new Vector3(-0.2f,-3.8f,0.0f),
+                new Vector3(0.4f,-3.8f,0.0f),
+                new Vector3(1.1f,-3.8f,0.0f),
+                new Vector3(1.7f,-3.8f,0.0f),
+                new Vector3(2.4f,-3.7f,0.0f),
+                new Vector3(2.8f,-3.2f,0.0f),
+                new Vector3(2.5f,-2.6f,0.0f),
+                new Vector3(1.9f,-2.3f,0.0f),
+                new Vector3(1.3f,-2.3f,0.0f),
+                new Vector3(0.6f,-2.4f,0.0f),
+                new Vector3(0.0f,-2.4f,0.0f),
+                new Vector3(-0.7f,-2.4f,0.0f),
+                new Vector3(-1.3f,-2.4f,0.0f),
+                new Vector3(-2.0f,-2.4f,0.0f),
+                new Vector3(-2.6f,-2.6f,0.0f),
+                new Vector3(-2.7f,-3.2f,0.0f),
+            };
+        }
+        else if (scene.name == "Level1") {
+            listPositionRopeTemplate = new List<Vector3> {
+                new Vector3(8.0f,1.6f,0.0f),
+                new Vector3(7.4f,1.6f,0.0f),
+                new Vector3(6.9f,1.2f,0.0f),
+                new Vector3(6.7f,0.6f,0.0f),
+                new Vector3(6.4f,0.0f,0.0f),
+                new Vector3(6.0f,-0.5f,0.0f),
+                new Vector3(5.7f,-1.1f,0.0f),
+                new Vector3(5.2f,-1.6f,0.0f),
+                new Vector3(4.7f,-1.9f,0.0f),
+                new Vector3(4.1f,-2.2f,0.0f),
+                new Vector3(3.4f,-2.3f,0.0f),
+                new Vector3(2.8f,-2.3f,0.0f),
+                new Vector3(2.2f,-2.5f,0.0f),
+                new Vector3(1.5f,-2.5f,0.0f),
+                new Vector3(0.9f,-2.6f,0.0f),
             };
         }
         else if (scene.name == "Level2") {
@@ -44,7 +73,7 @@ public class CheckDistance : MonoBehaviour {
                 new Vector3(-1.6f,-0.6f,0.0f),
             };
         }
-        else if (scene.name == "Level3") {
+        else if (scene.name == "EasterEgg") {
             listPositionRopeTemplate = new List<Vector3> {
                 new Vector3(-3.6f,0.9f,0.0f),
                 new Vector3(-3.3f,0.4f,0.0f),
@@ -104,7 +133,7 @@ public class CheckDistance : MonoBehaviour {
                 new Vector3(-2.4f,1.7f,0.0f),
             };
         }
-        else if (scene.name == "Level4") {
+        else if (scene.name == "Level3") {
             listPositionRopeTemplate = new List<Vector3> {
                 new Vector3(2.4f,0.0f,0.0f),
                 new Vector3(3.0f,0.0f,0.0f),
@@ -156,6 +185,90 @@ public class CheckDistance : MonoBehaviour {
                 new Vector3(4.0f,3.9f,0.0f),
                 new Vector3(4.5f,3.5f,0.0f),
                 new Vector3(4.9f,3.0f,0.0f),
+            };
+        }
+        else if (scene.name == "Level4") {
+            listPositionRopeTemplate = new List<Vector3> {
+                new Vector3(4.4f,1.0f,0.0f),
+                new Vector3(3.7f,1.0f,0.0f),
+                new Vector3(3.1f,1.2f,0.0f),
+                new Vector3(2.7f,1.7f,0.0f),
+                new Vector3(2.3f,2.2f,0.0f),
+                new Vector3(1.8f,2.7f,0.0f),
+                new Vector3(1.4f,3.2f,0.0f),
+                new Vector3(1.0f,3.6f,0.0f),
+                new Vector3(0.5f,4.1f,0.0f),
+                new Vector3(-0.1f,4.4f,0.0f),
+                new Vector3(-0.7f,4.4f,0.0f),
+                new Vector3(-1.4f,4.5f,0.0f),
+                new Vector3(-2.0f,4.5f,0.0f),
+                new Vector3(-2.7f,4.5f,0.0f),
+                new Vector3(-3.3f,4.4f,0.0f),
+                new Vector3(-3.6f,3.8f,0.0f),
+                new Vector3(-3.4f,3.2f,0.0f),
+                new Vector3(-3.1f,2.6f,0.0f),
+                new Vector3(-2.8f,2.1f,0.0f),
+                new Vector3(-2.5f,1.5f,0.0f),
+                new Vector3(-2.2f,0.9f,0.0f),
+                new Vector3(-1.9f,0.3f,0.0f),
+                new Vector3(-1.6f,-0.3f,0.0f),
+                new Vector3(-1.3f,-0.8f,0.0f),
+                new Vector3(-0.8f,-1.2f,0.0f),
+                new Vector3(-0.2f,-1.4f,0.0f),
+                new Vector3(0.5f,-1.6f,0.0f),
+                new Vector3(1.1f,-1.8f,0.0f),
+                new Vector3(1.7f,-2.0f,0.0f),
+                new Vector3(2.3f,-2.2f,0.0f),
+                new Vector3(2.8f,-2.6f,0.0f),
+                new Vector3(2.6f,-3.3f,0.0f),
+                new Vector3(2.1f,-3.6f,0.0f),
+                new Vector3(1.4f,-3.7f,0.0f),
+                new Vector3(0.8f,-3.8f,0.0f),
+                new Vector3(0.1f,-3.9f,0.0f),
+                new Vector3(-0.5f,-4.0f,0.0f),
+                new Vector3(-1.2f,-4.1f,0.0f),
+                new Vector3(-1.8f,-4.0f,0.0f),
+                new Vector3(-2.2f,-3.5f,0.0f),
+                new Vector3(-1.9f,-2.9f,0.0f),
+                new Vector3(-1.4f,-2.4f,0.0f),
+                new Vector3(-0.9f,-2.0f,0.0f),
+                new Vector3(-0.4f,-1.6f,0.0f),
+                new Vector3(0.1f,-1.2f,0.0f),
+                new Vector3(0.6f,-0.7f,0.0f),
+                new Vector3(0.9f,-0.2f,0.0f),
+                new Vector3(0.8f,0.4f,0.0f),
+                new Vector3(0.3f,0.9f,0.0f),
+                new Vector3(-0.2f,1.4f,0.0f),
+                new Vector3(-0.6f,1.8f,0.0f),
+                new Vector3(-1.1f,2.3f,0.0f),
+                new Vector3(-1.5f,2.7f,0.0f),
+                new Vector3(-2.1f,3.0f,0.0f),
+                new Vector3(-2.8f,3.0f,0.0f),
+                new Vector3(-3.4f,3.3f,0.0f),
+                new Vector3(-3.7f,3.9f,0.0f),
+                new Vector3(-3.3f,4.4f,0.0f),
+                new Vector3(-2.7f,4.5f,0.0f),
+                new Vector3(-2.0f,4.5f,0.0f),
+                new Vector3(-1.4f,4.5f,0.0f),
+                new Vector3(-0.7f,4.4f,0.0f),
+                new Vector3(0.0f,4.4f,0.0f),
+                new Vector3(0.5f,4.0f,0.0f),
+                new Vector3(0.5f,3.4f,0.0f),
+                new Vector3(0.3f,2.8f,0.0f),
+                new Vector3(0.5f,2.1f,0.0f),
+                new Vector3(1.0f,1.8f,0.0f),
+                new Vector3(1.6f,2.1f,0.0f),
+                new Vector3(2.0f,2.7f,0.0f),
+                new Vector3(2.4f,3.2f,0.0f),
+                new Vector3(2.7f,3.8f,0.0f),
+                new Vector3(3.1f,4.3f,0.0f),
+                new Vector3(3.7f,4.5f,0.0f),
+                new Vector3(4.2f,4.1f,0.0f),
+                new Vector3(4.4f,3.5f,0.0f),
+                new Vector3(4.7f,2.9f,0.0f),
+                new Vector3(4.6f,2.3f,0.0f),
+                new Vector3(4.3f,1.7f,0.0f),
+                new Vector3(3.9f,1.1f,0.0f),
             };
         }
         InvokeRepeating(nameof(checkDistance), 0,1);

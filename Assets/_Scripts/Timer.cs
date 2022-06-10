@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
     public bool TimerOn = false;
 
     public Text TimerTxt;
-   GameManager gm;
+    GameManager gm;
     void Start()
     {
         gm = GameManager.GetInstance();

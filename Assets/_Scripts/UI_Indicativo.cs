@@ -20,7 +20,7 @@ public class UI_Indicativo : MonoBehaviour
     {
         if (gm.passou){
             indicativo = "CHEGOU";
-            textComp.color = Color.yellow;
+            textComp.color = Color.black;
         }
         else if(gm.distance >2.5f){
             indicativo = "FRIO";
