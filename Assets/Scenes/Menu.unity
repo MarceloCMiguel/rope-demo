@@ -181,11 +181,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 76275faf2506cef448a86cd9cb99f8d3, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ROPE DEMO
+  m_Text: Pinned
 --- !u!222 &143649558
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -281,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7812619503750189378, guid: 85b59a0a1facd03408eb3d8665069a5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.15
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7812619503750189378, guid: 85b59a0a1facd03408eb3d8665069a5a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -354,11 +354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3600901632658483688, guid: d9264012d626ffc46b236e009502c4de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.91
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3600901632658483688, guid: d9264012d626ffc46b236e009502c4de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.13
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: 3600901632658483688, guid: d9264012d626ffc46b236e009502c4de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -463,8 +463,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.2735849, g: 0.12715957, b: 0.05549128, a: 0.33333334}
+    m_HighlightedColor: {r: 0.2735849, g: 0.12715957, b: 0.05549128, a: 0.7372549}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 0.6039216}
+  m_Color: {r: 0.2735849, g: 0.12715957, b: 0.05549128, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -663,7 +663,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 749a0052d95931846979517bba8dd231, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -675,7 +675,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Iniciar
+  m_Text: Start
 --- !u!222 &995772953
 CanvasRenderer:
   m_ObjectHideFlags: 0

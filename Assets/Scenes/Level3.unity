@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 1296446776}
   - component: {fileID: 1296446775}
   m_Layer: 0
-  m_Name: 2048px-Pentacle_2.svg
+  m_Name: Pentagrama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -722,7 +722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1645323049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3cf489a6b07e8488f90c241568753a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 10
+  TimeLeft: 30
   TimerOn: 1
   TimerTxt: {fileID: 56880464}
 --- !u!4 &1645323050

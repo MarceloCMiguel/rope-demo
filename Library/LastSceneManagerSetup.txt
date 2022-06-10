@@ -1,4 +1,8 @@
 sceneSetups:
+- path: Assets/Scenes/Menu.unity
+  isLoaded: 1
+  isActive: 0
+  isSubScene: 0
 - path: Assets/Scenes/Level1.unity
   isLoaded: 0
   isActive: 0
@@ -8,6 +12,14 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/Level3.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/Pause.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/Lose.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
